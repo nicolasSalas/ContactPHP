@@ -20,8 +20,8 @@ if(isset($_POST['name'],$_POST['email'],$_POST['message'])){
         $m->isSMTP();
         $m->SMTPAuth=true;
         $m->Host='smtp.gmail.com';
-        $m->Username='npsa1794@gmail.com';//replace with your email address
-        $m->Password='npsa1794.';//replace with your password
+        $m->Username='prueba@gmail.com';//replace with your email address
+        $m->Password='prueba.';//replace with your password
         $m->SMTPSecure='ssl';
         $m->Port=465;
 
@@ -30,7 +30,7 @@ if(isset($_POST['name'],$_POST['email'],$_POST['message'])){
         $m->Body='From:'.$fields['name'].'('.$fields['email'].')<p>'.$fields['message'].'</p>';
 
         $m->FromName='Contact';
-        $m->AddAddress('npsa1794@gmail.com','npsa1794.');
+        $m->AddAddress('prueba@gmail.com','prueba.');
         if ($m->send()) {
             header('Location:thanks.php');
             die();
